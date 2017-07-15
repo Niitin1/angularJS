@@ -19,8 +19,8 @@ $scope.displayNumeric = function () {
 };
 function calculateNumericForString(string) {
   var totalStringValue = 0;
-  for(var i =0; i<string.length;i++){
-    totalStringValue +=string.charCodeAt(i);
+  for(var i =0; i< string.length; i++){
+    totalStringValue += string.charCodeAt(i);
   }
   return totalStringValue;
 }
