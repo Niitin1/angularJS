@@ -9,6 +9,7 @@
 //
 // })
 
+//Lec 07
 angular.module('NameCalculator' , [])
 .controller('NameCalculateCalculator' , function($scope){
 $scope.name ="";

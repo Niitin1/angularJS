@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="DIApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../js/angular.min.js"></script>
+      <script src="../js/applec09.js"></script>
+      <style>body {font-size: 1.3em;}
+      </style>
+    <title>Dependence injection(DI)</title>
+  </head>
+  <body>
+    <h1>Dependency injection in JS</h1>
+    <div ng-controller="DIController">
+      <input type="text" ng-model="name"
+      ng-blur="upper();">
+    </div>
+
+  </body>
+</html>
