@@ -10,7 +10,7 @@
 
     $scope.upper = function(){
       var upCase = $filter('uppercase');
-      $scop.name = upCase($scope.name);
+      $scope.name = upCase($scope.name);
     };
     console.log($injector.annotate(DIController));
   }
