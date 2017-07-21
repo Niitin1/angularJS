@@ -4,7 +4,7 @@
 // .controller('MyFirstController', function ($scope) {
 //   $scope.name ="Nitin";
 //   $scope.sayHello = function(){
-//     return "Hello Coursera "
+//     return "Hello  "
 //   }
 //
 // })
