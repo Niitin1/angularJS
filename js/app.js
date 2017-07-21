@@ -4,7 +4,7 @@
 // .controller('MyFirstController', function ($scope) {
 //   $scope.name ="Nitin";
 //   $scope.sayHello = function(){
-//     return "Hello Coursera "
+//     return "Hello  "
 //   }
 //
 // })
@@ -22,6 +22,7 @@ function calculateNumericForString(string) {
   var totalStringValue = 0;
   for(var i =0; i< string.length; i++){
     totalStringValue += string.charCodeAt(i);
+    console.log("Value is "+i);
   }
   return totalStringValue;
 }
