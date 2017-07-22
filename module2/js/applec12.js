@@ -21,4 +21,4 @@ $scope.feedNitin = function(){
 
 }
 
-})
+})();
