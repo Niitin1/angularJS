@@ -14,6 +14,7 @@
       {{name }} has a msg for you is : <br>{{sayMessage()}}
     <div>
         <button ng-click="feedNitin()">Save Nitin</button>
+        Cost to feed Nitin : {{ cookieCost | currency : "" : 5}}
         <br><img ng-src="../images/save_{{stateOfBeing}}.jpg" >
       </div>
     </div>

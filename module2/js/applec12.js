@@ -8,6 +8,7 @@ MsgController.$inject = ['$scope', '$filter'];
 function MsgController($scope , $filter){
 $scope.name = "Nitin";
 $scope.stateOfBeing = "env";
+$scope.cookieCost = .45;
 
 $scope.sayMessage = function(){
  var msg = "Nitin eats healthy food";
@@ -18,7 +19,5 @@ $scope.sayMessage = function(){
 $scope.feedNitin = function(){
   $scope.stateOfBeing = "envi";
 };
-
 }
-
 })();
