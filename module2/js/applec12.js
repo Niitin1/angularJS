@@ -5,13 +5,14 @@ angular.module('MsgApp' , [])
 
 //learning to use filter service
 MsgController.$inject = ['$scope', '$filter'];
-function MsgController($scope){
+function MsgController($scope , $filter){
 $scope.name = "Nitin";
 $scope.stateOfBeing = "env";
 
 $scope.sayMessage = function(){
  var msg = "Nitin eats healthy food";
  var output =$filter('uppercase')(msg);
+ console.log(msg);
   return output;
 };
 $scope.feedNitin = function(){
