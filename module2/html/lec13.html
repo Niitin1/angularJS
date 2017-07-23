@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/applec13.js"></script>
+    <style>body {font-size: 1.2em;}
+  </style>
+    <title>Custom Filter</title>
+  </head>
+  <body>
+<h1>Custom Filter</h1>
+<div ng-controller='MsgController'>
+Original : {{sayMsg()}} <br>
+Less : {{sayLessMsg()}}
+<div>
+<button ng-click="feedNitin()">Feed Nitin </button>
+<br>
+<img ng-src="../images/save_{{stateOfBeing}}.jpg">
+</div>
+</div>
+  </body>
+</html>
