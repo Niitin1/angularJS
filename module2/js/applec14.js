@@ -5,7 +5,7 @@ angular.module("MsgApp", [])
 .filter("less" , customFactoryFilter)
 .filter("other" , otherCustomFunction);
 
-//here we inject lessFilter, where "less" comes from above staatement as the filter name while "Filter" is/will  append by angular js
+//here we inject lessFilter, where "less" comes from above statement as the filter name while "Filter" is/will  append by angular js
 MsgController.$inject=['$scope' , 'lessFilter'];
 function MsgController($scope, lessFilter){
 $scope.stateOfBeing = "env";
