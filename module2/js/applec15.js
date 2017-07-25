@@ -20,15 +20,23 @@ $scope.countOnce = function(){
 $scope.upCounter = function(){
   $scope.counter++;
 };
-//special function watch takes two properties,  first property we want to watch
-$scope.$watch('onceCounter' , function(newValue, oldValue){
-  console.log("old value "+ oldValue + " new Value  "+ newValue);
 
-});
 
-$scope.$watch('counter' , function(newValue, oldValue){
-  console.log("old values "+ oldValue + " new Values  "+ newValue);
+// //special function watch takes two properties,  first property we want to watch
+// $scope.$watch('onceCounter' , function(newValue, oldValue){
+//   console.log("old value "+ oldValue + " new Value  "+ newValue);
+//
+// });
+//
+// $scope.$watch('counter' , function(newValue, oldValue){
+//   console.log("old values "+ oldValue + " new Values  "+ newValue);
+//
+// });
 
-});
+//Another way yo use watcher(use this)
+$scope.$watch(function(){
+
+console.log("Digest LOOP");
+})
 }
 })();
