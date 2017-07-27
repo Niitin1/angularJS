@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/applec16.js"></script>
+    <style>body {font-size: 1.2em;}
+  </style>
+    <title> 2 way, 1 way and 1 time binding</title>
+  </head>
+  <body>
+    <h2>2 way, 1 way and 1 time binding</h2>
+    <div  ng-controller ="BindingController">
+      <button type="button"  ng-click ="showNumberOfWatcher()">No of Watchers</button>
+      <button type="button"  ng-click="setFullName()">Full Name</button><br>
+      Full Name is :{{ :: fullName}} <br>
+      <button type="button" ng-click="logFirstName()">Log First Name</button><br>
+      <button type="button"  ng-click="logFullName()">Log Full Name</button><br>
+      <div >
+        <input type="text" ng-model="firstName">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
