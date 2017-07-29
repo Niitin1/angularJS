@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/applec18.js"></script>
+    <script src="../js/filter.js"></script>
+    <style>body {font-size: 1.2em;}
+  </style>
+    <title>ng-filter</title>
+  </head>
+  <body>
+    <h2>Fillter Array example</h2>
+    <div ng-controller="NgFilterController">
+      <input type="text" ng-model="search">
+      <h3>Shopping List :</h3>
+      <ul>
+        <li ng-repeat = "item in shoppingList1 | filter : search">{{item}}</li>
+      </ul>
+
+    </div>
+  </body>
+</html>
