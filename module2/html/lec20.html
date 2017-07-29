@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/applec20.js"></script>
+    <style>body {font-size: 1.2em;}
+  </style>
+    <title>Controller As Syntax</title>
+  </head>
+  <body>
+<h2>Controller As Syntax</h2>
+<div ng-controller="ParentController1">
+  <div ng-controller="ChildController1">
+
+  </div>
+
+</div>
+<div ng-controller="ParentController2 as parent">
+  Parent Value : {{parent.value}}
+  <div ng-controller="ChildController2 as child">
+    Child Value: {{child.value}}
+      Parent Value : {{parent.value}}
+  </div>
+</div>
+  </body>
+</html>
