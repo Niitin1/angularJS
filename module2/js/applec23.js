@@ -8,7 +8,7 @@ angular.module('ShoppingListApp', [])
 
 Config.$inject = ['ShoppingListServiceProvider'];
 function Config(ShoppingListServiceProvider) {
-  
+
   ShoppingListServiceProvider.defaults.maxItems = 2;
 }
 
@@ -25,6 +25,9 @@ function ShoppingListController(ShoppingListService) {
   list.addItem = function () {
     try {
       ShoppingListService.addItem(list.itemName, list.itemQuantity);
+      list.itemName = "";
+      list.itemQuantity = "";
+
     } catch (error) {
       list.errorMessage = error.message;
     }
