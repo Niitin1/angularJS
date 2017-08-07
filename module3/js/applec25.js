@@ -1,6 +1,7 @@
 (function (){
 'use strict';
 
+//in directive we use camelForma
 angular.module("ControllerAsApp" ,[])
 .controller("ShoppingListController1" , ShoppingListController1)
 .controller("ShoppingListController2" , ShoppingListController2)
@@ -10,8 +11,11 @@ angular.module("ControllerAsApp" ,[])
 
 function ListItem(){
   var ddo ={
-    restrict: "AE",    
-    templateUrl:"../html/listItem.html"
+      templateUrl:"../html/listItem.html",
+    scope :{
+      list: '=myList', //two way binding
+      title : '@title' //one way binding
+    }
   };
   return ddo;
 }
@@ -31,15 +35,20 @@ var list1 = this;
 
 var shoppingList = ShoppingListFactory();
 list1.items = shoppingList.getItems();
+var origTitle = "Shopping List #1";
+list1.title = origTitle +" ( "+list1.items.length + " items)" ;
+
 list1.itemName = "";
 list1.itemQuantity = "";
 list1.addItem = function(){
   shoppingList.addItem(list1.itemName, list1.itemQuantity);
+  list1.title = origTitle +" ( "+list1.items.length + " items)" ;
   list1.itemName = "";
   list1.itemQuantity="";
 }
 list1.removeItem = function(itemIndex){
   shoppingList.removeItem(itemIndex);
+  list1.title = origTitle +" ( "+list1.items.length + " items)" ;
 };
 }
 

@@ -10,28 +10,26 @@
   <body>
     <h2>Templates Expanding Directives</h2>
     <!-- List 1 Shopping List1 -->
-    <div id="list1" ng-controller="ShoppingListController1 as list">
-      <h3>Shopping List #1</h3>
-      <input type="text" ng-model="list.itemName" placeholder="item name">
-      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
-      <button ng-click="list.addItem();">Add Item</button>
+    <div id="list1" ng-controller="ShoppingListController1 as list1">
 
-      <ol>
-        <!-- <listItem ng-repeat="item in list.items"></listItem>   -->
-         <li list-Item ng-repeat="item in list.items"></li list-Item> 
-      </ol>
-      <div class="error">Error : {{list.errorMessage}}</div>
+      <input type="text" ng-model="list1.itemName" placeholder="item name">
+      <input type="text" ng-model="list1.itemQuantity" placeholder="quantity">
+      <button ng-click="list1.addItem();">Add Item</button>
+      <list-item my-list="list1" title="{{list1.title}}"></list-item>
+      <!-- <ol>
+      <listItem ng-repeat="item in list.items"></listItem>
+         <li list-Item ng-repeat="item in list1.items"></li list-Item>
+      </ol> -->
+      <div ng-if="list1.errorMessage" class="error">Error : {{list1.errorMessage}}</div>
     </div>
     <!-- List2 Shopping List2 -->
-    <div id="list2" ng-controller="ShoppingListController2 as list">
+    <div id="list2" ng-controller="ShoppingListController2 as list2">
       <h3>Shopping List #2</h3>
-      <input type="text" ng-model="list.itemName" placeholder="item name">
-      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
-      <button ng-click="list.addItem();">Add Item</button>
-      <ol>
-      <list-item ng-repeat="item in list.items"></list-item>
-      </ol>
-      <div class="error">Error : {{list.errorMessage}}</div>
+      <input type="text" ng-model="list2.itemName" placeholder="item name">
+      <input type="text" ng-model="list2.itemQuantity" placeholder="quantity">
+      <button ng-click="list2.addItem();">Add Item</button>
+      <list-item my-list="list2" title="Shopping List #2"></list-item>
+      <div ng-if="list2.errorMessage" class="error">Error : {{list2.errorMessage}}</div>
     </div>
 
   </body>
