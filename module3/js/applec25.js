@@ -10,6 +10,7 @@ angular.module("ControllerAsApp" ,[])
 
 function ListItem(){
   var ddo ={
+    restrict: "AE",    
     templateUrl:"../html/listItem.html"
   };
   return ddo;
