@@ -74,7 +74,7 @@ function ShoppingListServiceProvider() {
   var provider = this;
 
   provider.defaults = {
-    maxItems: 10
+    maxItems: 3
   };
 
   provider.$get = function () {

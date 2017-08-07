@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="ControllerAsApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/applec25.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Templates Expanding Directives</title>
+  </head>
+  <body>
+    <h2>Templates Expanding Directives</h2>
+    <!-- List 1 Shopping List1 -->
+    <div id="list1" ng-controller="ShoppingListController1 as list">
+      <h3>Shopping List #1</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <list-item ng-repeat="item in list.items"></list-item>
+      </ol>
+      <div class="error">Error : {{list.errorMessage}}</div>
+    </div>
+    <!-- List2 Shopping List2 -->
+    <div id="list2" ng-controller="ShoppingListController2 as list">
+      <h3>Shopping List #2</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+      <list-item ng-repeat="item in list.items"></list-item>
+      </ol>
+      <div class="error">Error : {{list.errorMessage}}</div>
+    </div>
+
+  </body>
+</html>
