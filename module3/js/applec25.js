@@ -11,13 +11,32 @@ angular.module("ControllerAsApp" ,[])
 
 function ListItem(){
   var ddo ={
+      restrict:"AE",
       templateUrl:"../html/listItem.html",
-    scope :{
-      list: '=myList', //two way binding
-      title : '@title' //one way binding
-    }
+
+    // scope :{
+    //   list: '<',
+    //   title : '@'
+    // },
+    // controller: ShoppingListDirectiveController,
+    // controllerAs:"list1",
+    // bindToController:true
   };
   return ddo;
+}
+
+function ShoppingListDirectiveController() {
+  var list=this;
+  list.cookieInList = function(){
+    for (var i=0; i<list.items.length; i++){
+      var name= list.items[i].name;
+      if(name.toLowerCase().indexOf("cookie")!==-1){
+        return true;
+      }
+    }
+    return false;
+  };
+
 }
 
 function ListItemDescription(){

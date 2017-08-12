@@ -5,31 +5,31 @@
     <script src="../js/angular.min.js"></script>
     <script src="../js/applec25.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Templates Expanding Directives</title>
+    <title>Directives With their own controller</title>
   </head>
   <body>
-    <h2>Templates Expanding Directives</h2>
+    <h2>Directives With their own controllers</h2>
     <!-- List 1 Shopping List1 -->
-    <div id="list1" ng-controller="ShoppingListController1 as list1">
+    <div id="list1" ng-controller="ShoppingListController1 as list">
 
-      <input type="text" ng-model="list1.itemName" placeholder="item name">
-      <input type="text" ng-model="list1.itemQuantity" placeholder="quantity">
-      <button ng-click="list1.addItem();">Add Item</button>
-      <list-item my-list="list1" title="{{list1.title}}"></list-item>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <list-item ></list-item>
       <!-- <ol>
       <listItem ng-repeat="item in list.items"></listItem>
          <li list-Item ng-repeat="item in list1.items"></li list-Item>
       </ol> -->
-      <div ng-if="list1.errorMessage" class="error">Error : {{list1.errorMessage}}</div>
+      <div ng-if="list.errorMessage" class="error">Error : {{list.errorMessage}}</div>
     </div>
     <!-- List2 Shopping List2 -->
-    <div id="list2" ng-controller="ShoppingListController2 as list2">
+    <div id="list2" ng-controller="ShoppingListController2 as list">
       <h3>Shopping List #2</h3>
-      <input type="text" ng-model="list2.itemName" placeholder="item name">
-      <input type="text" ng-model="list2.itemQuantity" placeholder="quantity">
-      <button ng-click="list2.addItem();">Add Item</button>
-      <list-item my-list="list2" title="Shopping List #2"></list-item>
-      <div ng-if="list2.errorMessage" class="error">Error : {{list2.errorMessage}}</div>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <list-item my-list="list" title="Shopping List #2"></list-item>
+      <div ng-if="list.errorMessage" class="error">Error : {{list.errorMessage}}</div>
     </div>
 
   </body>
